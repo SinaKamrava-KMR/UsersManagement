@@ -139,6 +139,9 @@ input:invalid[focused="true"] + small  {
 .form-btn:hover {
   background-color: rgb(92, 92, 236);
 }
+.form-btn.disable {
+  background-color: rgb(191, 191, 250);
+}
 
 .input-wrapper {
   display: flex;

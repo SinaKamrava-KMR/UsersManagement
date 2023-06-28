@@ -1,7 +1,10 @@
-export default function Button({ onSubmitForm }) {
+export default function Button({ onSubmitForm, value, disable }) {
   return (
-    <button className="form-btn" onClick={onSubmitForm}>
-      اضافه کردن
+    <button
+      className={`form-btn ${disable ? "disable" : ""}`}
+      onClick={!disable? onSubmitForm:()=>{}}
+    >
+      {value}
     </button>
   );
 }

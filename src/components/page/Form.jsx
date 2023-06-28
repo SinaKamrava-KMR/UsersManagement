@@ -64,6 +64,7 @@ export default function Form({ users, onManageUser, selectedUser }) {
   ];
 
   function handleChange({ key, value }) {
+   
     setInfo({ ...info, [key]: value });
   }
 
@@ -94,7 +95,11 @@ export default function Form({ users, onManageUser, selectedUser }) {
           />
         ))}
 
-        <Button onSubmitForm={handleSubmitForm} />
+        <Button
+          value={info.id === 0 ? "اضافه کردن " : "ویرایش کردن"}
+          disable={(Object.values(info).some(item=> item ===''))}
+          onSubmitForm={handleSubmitForm}
+        />
       </form>
     </>
   );
